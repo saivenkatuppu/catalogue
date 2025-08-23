@@ -41,8 +41,6 @@ pipeline {
                 }
             }
         }
-        
-    }
         stage('Docker Build') {
             steps {
                 script {
@@ -56,6 +54,7 @@ pipeline {
                 }
             }
         }
+    }
 
     post { 
         always { 
