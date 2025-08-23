@@ -22,7 +22,7 @@ pipeline {
     } */
     // Build
     stages {
-        stage('Build') {
+        stage('Read Package.json') {
             steps {
                  script {
                     def packageJson = readJSON file: 'package.json'
@@ -31,10 +31,13 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
+        stage('Install Dependencies') {
             steps {
                 script{
-                    echo 'Testing..'
+                    sh """
+                    npm install
+                    
+                    """
                 }
             }
         }
