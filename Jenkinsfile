@@ -62,6 +62,7 @@ pipeline {
         stage('Trigger Deploy') {
              when{
                 expression { params.deploy }
+             }
             steps {
                 script {
                     build job: 'catalogue-cd',
@@ -74,8 +75,7 @@ pipeline {
                     }
                 }
             }
-        }        
-    }
+      }
 
     post { 
         always { 
