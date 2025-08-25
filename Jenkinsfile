@@ -59,7 +59,7 @@ pipeline {
                 }
             }
         }
-        stage('trigger deploy') {
+        stage('Trigger Deploy') {
              when{
                 expression { params.deploy }
             steps {
