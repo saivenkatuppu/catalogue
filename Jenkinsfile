@@ -37,7 +37,7 @@ pipeline {
                 }
             }
         }
-         stage('Unit Testing') {
+        stage('Unit Testing') {
             steps {
                 script {
                    sh """
@@ -74,8 +74,7 @@ pipeline {
                     }
                 }
             }
-        }
-        
+        }        
     }
 
     post { 
